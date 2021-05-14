@@ -1,0 +1,16 @@
+# Boxes include navigation
+
+- title: Getting Started
+  desc: Get started with a curated list of subjects
+  icon: cog
+  doc: getting-started
+
+- title: Tutorials<br><br>
+  desc: Learn about features and how to use them
+  icon: settings
+  doc: hero
+
+- title: Docs
+  desc: Find technical guidance for your specific requirements
+  icon: code
+  doc: customize

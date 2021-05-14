@@ -13,7 +13,7 @@ permalink: /:title/
 url: ""
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
-logo: flutter-logo.png
+logo: ""
 
 # Enable or disable the site search
 # Supports true (default) or false

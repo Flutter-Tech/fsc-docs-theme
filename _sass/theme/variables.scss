@@ -9,9 +9,9 @@ $global-secondary-background: #222;
 $global-warning-background: #fbc418;
 $global-success-background: #403e56;
 $global-danger-background: #f0506e;
-$base-link-color: $global-color;
-$base-link-hover-color: $global-color;
-$link-muted-hover-color: $global-color;
+$base-link-color: $global-primary-background;
+$base-link-hover-color: $global-primary-background;
+$link-muted-hover-color: $global-muted-color;
 $white: #fff !default;
 
 $grey-dk-000: #959396 !default;

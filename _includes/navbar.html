@@ -56,7 +56,7 @@
                     </ul>
                 </div>
                 <div class="uk-navbar-left uk-hidden@m">
-                    <a class="uk-navbar-item uk-logo" href="{{ "/" | relative_url }}">{% if site.logo %}<img src="{{ site.uploads | absolute_url }}{{ site.logo }}" alt="{{ site.title | escape }}">{% else %}{{ site.title | escape }}{% endif %}</a>
+                    <a class="uk-navbar-item uk-logo" href="{{ "/" | relative_url }}">{% if site.logo %}<img src="{{ site.uploads | absolute_url }}{{ site.logo }}" alt="{{ site.title | escape }}">{% else %}<img src="/assets/img/flutter-logo.png" alt="{{ site.title | escape }}" class="site-logo">{% endif %}</a>
                 </div>
                 <div class="uk-navbar-right">
                     {% if site.search_enabled != false %}

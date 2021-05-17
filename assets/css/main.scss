@@ -19,5 +19,39 @@
 @import "theme/uikit";
 
 // Other vendor styles
-@import "syntax-highlighting/github";
-//@import "syntax-highlighting/bw";
+// @import "syntax-highlighting/cld";
+@import "syntax-highlighting/friendly";
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+em {
+    color: $global-color;
+    font-style: italic;
+}
+blockquote{
+    border-left: 4px solid $global-primary-background;
+    padding: 10px 0 10px 10px;
+
+    cite{
+        display: inline-block;
+        font-style: italic;
+        margin-top: 10px;
+    }
+}
+
+hr, .uk-hr {
+    border-top: 1px solid $global-primary-background;
+}
+table {
+    caption{
+        font-size: .7rem;
+    }
+    th{
+        background-color: #f4f4f4;
+    }
+    td{
+        padding-left: 10px;
+    }
+}

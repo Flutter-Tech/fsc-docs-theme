@@ -13,18 +13,18 @@
 {% endif %}
 
 <div>
-    <div class="uk-container{{container}}">
+    <div class="uk-container{{container}} uk-container-expand">
 
         {% if include.title %}
-            <h2 class="uk-h1 uk-text-center">{{ include.title }}</h2>
+            <h2 class="uk-h1>{{ include.title }}</h2>
         {% endif %}
 
-        {% if include.subtitle %}<p class="uk-text-lead uk-text-center">{{ include.subtitle | escape }}</p>{% endif %}
+        {% if include.subtitle %}<p class="uk-text-lead">{{ include.subtitle | escape }}</p>{% endif %}
 
         <div class="uk-child-width-1-{{ columns }}@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid>
         {% for item in site.data.navigation_boxes %}
             {% if item.title %}
-            {% assign doc_url = item.doc | prepend:"/docs/" | append:"/" %}
+            {% assign doc_url = item.doc | prepend:"/" | append:"/" %}
             {% assign doc = site.docs | where:"url", doc_url | first %}
             <div>
                 <div class="uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">

@@ -19,16 +19,14 @@
             <h2 class="uk-h1">{{ include.title }}</h2>
         {% endif %}
 
-        {% if include.subtitle %}<p class="uk-text-lead uk-text-center">{{ include.subtitle | escape }}</p>{% endif %}
+        {% if include.subtitle %}<p class="uk-text-lead">{{ include.subtitle | escape }}</p>{% endif %}
 
         <div class="uk-child-width-1-2@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid data-uk-lightbox>
             <div>
-                <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium uk-card-body uk-inline border-radius-large border-xlight">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/KaLX_z1gAj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium uk-card-body uk-inline border-radius-large border-xlight">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/muShxVlnm0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                   <iframe width="100%" height="315" src="https://www.youtube.com/embed/KaLX_z1gAj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>    
+            <div>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/muShxVlnm0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
 

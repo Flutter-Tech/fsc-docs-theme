@@ -1,19 +1,5 @@
-{% if include.columns %}
-    {% assign columns = include.columns %}
-    {% if columns == '1' %}
-        {% assign container = ' uk-container-xsmall' %}
-    {% elsif columns == '2' %}
-        {% assign container = ' uk-container-small' %}
-    {% else %}
-        {% assign container = '' %}
-    {% endif %}
-{% else %}
-    {% assign columns = 3 %}
-    {% assign container = '' %}
-{% endif %}
-
 <div class="uk-section section-videos">
-    <div class="uk-container{{container}}">
+    <div class="uk-container uk-width-expand">
 
         {% if include.title %}
             <h2 class="uk-h1">{{ include.title }}</h2>

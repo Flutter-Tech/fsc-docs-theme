@@ -79,7 +79,8 @@
     {% assign currLevel = 0 %}
     {% assign lastLevel = 0 %}
 
-    {% capture listModifier %}{% if orderedList %}ol class="uk-nav uk-nav-default tm-nav uk-nav-parent-icon" uk-scrollspy-nav="closest: li; scroll: true"{% else %}ul class="uk-scrollspy-nav" uk-scrollspy-nav="closest: li; scroll: true; offset: 100"{% endif %}{% endcapture %}
+    {% capture listModifier %}{% if orderedList and currLevel == 0 %}ol class="uk-nav uk-nav-default tm-nav uk-nav-parent-icon" uk-scrollspy-nav="closest: li; scroll: true; offset:100"{% elseif orderedList == false and currLevel == 0 %}ul class="uk-scrollspy-nav" uk-scrollspy-nav="closest: li; scroll: true; offset: 100"{% endif %}{% endcapture %}
+    {% if orderedList and currLevel > 0 %}ol{% elseif orderedList == false and currLevel > 0 %}ul{% endif %}
 
     {% for node in nodes %}
         {% if node == "" %}

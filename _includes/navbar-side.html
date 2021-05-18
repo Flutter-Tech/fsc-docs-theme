@@ -11,8 +11,10 @@
         <article class="uk-article">
           {{ content }}
         </article>
-        <div class="toc-container">
+        <div class="tm-sidebar-right uk-visible@m">
+          <div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-below uk-sticky-fixed" style="position: fixed; top: 160px; width: 200px;">
           {% include toc.html html=content %}
+          </div>
         </div>
       </div>
       {% else %}

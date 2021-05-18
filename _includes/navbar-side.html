@@ -6,14 +6,22 @@
           {% assign menu = site.data.menus.main %} {% include menus.html %}
         </div>
       </div>
+      {% if page.toc %}
+      <div class="uk-width-1-2@m uk-column-divider uk-width-expand@m">
+        <article class="uk-article">
+          {{ content }}
+        </article>
+        <div class="toc-container">
+          {% include toc.html html=content %}
+        </div>
+      </div>
+      {% else %}
       <div class="uk-width-1-1 uk-width-expand@m">
         <article class="uk-article">
-          {% if page.toc %}
-            {% include toc.html html=content %}
-          {% endif %}
           {{ content }}
         </article>
       </div>
+      {% endif %}
     </div>
   </div>
 </div>

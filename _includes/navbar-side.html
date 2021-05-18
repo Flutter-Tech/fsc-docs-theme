@@ -7,12 +7,12 @@
         </div>
       </div>
       {% if page.toc %}
-      <div class="uk-width-1-2@m uk-column-divider uk-width-expand@m uk-position-relative">
+      <div class="uk-width-1-2@m uk-column-divider uk-position-relative">
         <article class="uk-article">
           {{ content }}
         </article>
         <div class="tm-sidebar-right uk-visible@m">
-          <div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-below uk-sticky-fixed" style="position: fixed; top: 160px; width: 200px;">
+          <div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-below uk-sticky-fixed">
           {% include toc.html html=content %}
           </div>
         </div>

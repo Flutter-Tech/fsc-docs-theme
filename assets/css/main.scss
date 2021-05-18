@@ -28,3 +28,8 @@
     top: 0;
     width: 200px;
 }
+.uk-scrollspy-nav{
+    .uk-active{
+        color: $global-primary-background;
+    }
+}

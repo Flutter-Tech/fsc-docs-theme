@@ -6,14 +6,24 @@
           {% assign menu = site.data.menus.main %} {% include menus.html %}
         </div>
       </div>
+      {% if page.toc %}
+      <div class="uk-width-1-2@m uk-column-divider uk-position-relative">
+        <article class="uk-article">
+          {{ content }}
+        </article>
+        <div class="tm-sidebar-right uk-visible@m">
+          <div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-below uk-sticky-fixed">
+          {% include toc.html html=content class="uk-scrollspy-nav" ukscrollspynav="closest: li; scroll: true; offset: 50" h_min=2 h_max=3 %}
+          </div>
+        </div>
+      </div>
+      {% else %}
       <div class="uk-width-1-1 uk-width-expand@m">
         <article class="uk-article">
-          {% if page.toc %}
-            {% include toc.html html=content %}
-          {% endif %}
           {{ content }}
         </article>
       </div>
+      {% endif %}
     </div>
   </div>
 </div>

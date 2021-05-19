@@ -21,3 +21,70 @@
 // Other vendor styles
 @import "syntax-highlighting/github";
 //@import "syntax-highlighting/bw";
+
+html {
+  scroll-behavior: smooth;
+}
+.tm-sidebar-right {
+  left: calc(100% + 60px);
+  position: absolute;
+  top: 0;
+  width: 200px;
+
+  .uk-sticky {
+    border-left: 1px solid $global-primary-background;
+    padding: 5px 10px 10px 15px;
+    font-size: 12px;
+    position: relative;
+
+    &::before {
+        content: "On this page";
+        text-transform: uppercase;
+        padding: 5px 0 5px 0;
+        display: block;
+      }
+  }
+
+  ul {
+    padding: 0 5px;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style: none;
+    line-height: 15px;
+
+    &:first-child {
+      margin-top: 5px;
+      list-style: none;
+    }
+
+    &.uk-active > a::before {
+      content: "❯";
+      position: absolute;
+      left: 8px;
+      color: $global-primary-background;
+      transition: all 1.5s;
+    }
+
+    a {
+      color: #666;
+      transition: all 0.5s;
+      &:hover {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+
+    &.uk-active > a {
+      color: $global-primary-background;
+      transition: all 0.5s;
+    }
+  }
+}
+.uk-scrollspy-nav {
+  & > .uk-active {
+    color: $global-primary-background;
+  }
+}

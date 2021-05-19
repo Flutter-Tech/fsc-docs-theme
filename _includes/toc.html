@@ -171,12 +171,12 @@
             {% capture rootAttributes %} class="{{ include.class | split: '.' | join: ' ' }}"{% endcapture %}
         {% endif %}
 
-        {% if include.id and include.id != blank %}
-            {% capture rootAttributes %}{{ rootAttributes }} id="{{ include.id }}"{% endcapture %}
+        {% if include.ukscrollspynav and include.ukscrollspynav != blank %}
+            {% capture rootAttributes %}{{ rootAttributes }} uk-scrollspy-nav="{{ include.ukscrollspynav | join: ' '}}"{% endcapture %}
         {% endif %}
 
-        {% if include.ukscrollspynav and include.ukscrollspynav != blank %}
-            {% capture rootAttributes %}{{ rootAttributes }} uk-scrollspy-nav="{{ include.ukscrollspynav }}" {% endcapture %}
+        {% if include.id and include.id != blank %}
+            {% capture rootAttributes %}{{ rootAttributes }} id="{{ include.id }}"{% endcapture %}
         {% endif %}
 
         {% if rootAttributes %}

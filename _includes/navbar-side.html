@@ -13,7 +13,7 @@
         </article>
         <div class="tm-sidebar-right uk-visible@m">
           <div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-below uk-sticky-fixed">
-          {% include toc.html html=content class="uk-scrollspy-nav" %}
+          {% include toc.html html=content class="uk-scrollspy-nav" uk-scrollspy-nav="closest: li; scroll: true; offset: 100"%}
           </div>
         </div>
       </div>

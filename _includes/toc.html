@@ -166,15 +166,17 @@
 
     {% if jekyll_toc != '' %}
         {% assign rootAttributes = '' %}
-
-        {% capture rootAttributes %} uk-scrollspy-nav="closest: li; scroll: true; offset: 100" {% endcapture %}
-        
+       
         {% if include.class and include.class != blank %}
             {% capture rootAttributes %}attr="mine" class="{{ include.class | split: '.' | join: ' ' }}"{% endcapture %}
         {% endif %}
 
         {% if include.id and include.id != blank %}
             {% capture rootAttributes %}{{ rootAttributes }} id="{{ include.id }}"{% endcapture %}
+        {% endif %}
+
+        {% if include.uk-scrollspy-nav and include.uk-scrollspy-nav != blank %}
+            {% capture rootAttributes %} uk-scrollspy-nav="{{ include.class | split: '.' | join: ' ' }}" {% endcapture %}
         {% endif %}
 
         {% if rootAttributes %}

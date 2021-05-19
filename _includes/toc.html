@@ -170,7 +170,7 @@
         {% capture rootAttributes %} uk-scrollspy-nav="closest: li; scroll: true; offset: 100" {% endcapture %}
         
         {% if include.class and include.class != blank %}
-            {% capture rootAttributes %} class="{{ include.class | split: '.' | join: ' ' }}"{% endcapture %}
+            {% capture rootAttributes %}attr="mine" class="{{ include.class | split: '.' | join: ' ' }}"{% endcapture %}
         {% endif %}
 
         {% if include.id and include.id != blank %}

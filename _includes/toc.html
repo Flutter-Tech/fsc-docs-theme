@@ -175,8 +175,8 @@
             {% capture rootAttributes %}{{ rootAttributes }} id="{{ include.id }}"{% endcapture %}
         {% endif %}
 
-        {% if include.uk-scrollspy-nav and include.uk-scrollspy-nav != blank %}
-            {% capture rootAttributes %} uk-scrollspy-nav="{{ include.uk-scrollspy-nav | split: '.' | join: ' ' }}" {% endcapture %}
+        {% if include.ukscrollspynav and include.ukscrollspynav != blank %}
+            {% capture rootAttributes %}{{ rootAttributes }} uk-scrollspy-nav="{{ include.ukscrollspynav }}" {% endcapture %}
         {% endif %}
 
         {% if rootAttributes %}

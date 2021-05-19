@@ -168,7 +168,7 @@
         {% assign rootAttributes = '' %}
        
         {% if include.class and include.class != blank %}
-            {% capture rootAttributes %}attr="mine" class="{{ include.class | split: '.' | join: ' ' }}"{% endcapture %}
+            {% capture rootAttributes %} class="{{ include.class | split: '.' | join: ' ' }}"{% endcapture %}
         {% endif %}
 
         {% if include.id and include.id != blank %}

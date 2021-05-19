@@ -165,7 +165,7 @@
     {% endfor %}
 
     {% if jekyll_toc != '' %}
-        {% assign rootAttributes = '' %}
+        {% assign rootAttributes = 'uk-scrollspy-nav="closest: li; scroll: true; offset: 100" ' %}
         {% if include.class and include.class != blank %}
             {% capture rootAttributes %} class="{{ include.class | split: '.' | join: ' ' }}"{% endcapture %}
         {% endif %}

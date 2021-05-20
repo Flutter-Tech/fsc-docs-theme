@@ -514,6 +514,7 @@
     padding-right: $global-medium-gutter;
     top: 112px;
     bottom: 70px;
+    overflow-y: auto;
     overflow-x: hidden;
     margin-left: 15px;
     > h5 {

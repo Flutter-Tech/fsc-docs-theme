@@ -71,7 +71,14 @@ table {
     }
   }
 }
-
+.top-navbar-sticky{
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+}
+.main-content-margin{
+    margin-top: 80px;
+}
 .tm-sidebar-right {
   left: calc(100% + 60px);
   position: absolute;

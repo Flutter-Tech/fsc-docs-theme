@@ -27,7 +27,7 @@
             {% assign doc_url = item.doc | prepend:"/" | append:"/" %}
             <div>
                 <div class="uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
-                    <a class="uk-position-cover" href="{{ doc.url | relative_url }}"></a>
+                    <a class="uk-position-cover" href="{{ doc.url }}"></a>
                     {% if item.icon %}
                     <span data-uk-icon="icon: {{ item.icon }}; ratio: 3.4" class=""></span>
                     {% endif %}

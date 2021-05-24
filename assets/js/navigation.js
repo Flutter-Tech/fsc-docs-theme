@@ -8,13 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // Adds marking class to current page menu
   const linkMenusEl = document.getElementsByClassName("menu-link");
-  for (let linkMenu of linkMenusEl) {
-    linkMenuHref = linkMenu.getAttribute("href");
-    if (linkMenuHref === window.location.pathname) {
-      linkMenuParent = linkMenu.parentNode;
-      linkMenuParent.classList.toggle("nav-active");
-    }
-  }
+  markMenu(linkMenusEl);
+  // Opens parent menus
   const menuElements = findElementByClassUrl("menu-link", window.location.href);
   openMenus(menuElements);
 });
@@ -23,7 +18,17 @@ function toggleVerticalMenu(el) {
   var parentEl = el.parentNode;
   parentEl.classList.toggle("nav-open");
 }
-
+//Marks the menu that points to the current URL
+function markMenu(menuElements) {
+  for (let linkMenu of menuElements) {
+    linkMenuHref = linkMenu.getAttribute("href");
+    console.log(linkMenuHref)
+    if (linkMenuHref === window.location.pathname) {
+      linkMenuParent = linkMenu.parentNode;
+      linkMenuParent.classList.toggle("nav-active");
+    }
+  }
+}
 //Checks if is child menu and opens parents
 function openMenus(menuElements) {
   for (var i = 0; i < menuElements.length; i++) {

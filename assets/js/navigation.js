@@ -26,8 +26,6 @@ function markMenu(menuElements) {
     if (linkMenuHref === window.location.pathname) {
       console.log(linkMenuHref);
       linkMenuParent = linkMenu.parentNode;
-      console.log(linkMenuParent);
-      linkMenuParent.classList.toggle("nav-active");
     }
   }
 }

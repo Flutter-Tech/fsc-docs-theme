@@ -196,3 +196,101 @@ table {
     color: $global-primary-background;
   }
 }
+
+.sidebar-docs {
+  > ul {
+    > li {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.4;
+      > ul {
+        > li {
+          font-weight: normal;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.sidebar-nav {
+  font-size: 0.875rem;
+  ul {
+    li {
+      list-style: none;
+      list-style-position: outside;
+      padding: 10px 0;
+      position: relative;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #666;
+    padding-right: 10px;
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  .nav-parent {
+    position: relative;
+    > .parent-icon {
+      img {
+        width: 1.5em;
+        height: 1.5em;
+      }
+      width: 1.5em;
+      height: 1.5em;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.1%22%20points%3D%2210%201%204%207%2010%2013%22%20%2F%3E%0A%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      position: absolute;
+      top: 10px;
+      right: 0;
+    }
+  }
+  .nav-parent.nav-open {
+    > .parent-icon {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.1%22%20points%3D%221%204%207%2010%2013%204%22%20%2F%3E%0A%3C%2Fsvg%3E");
+    }
+  }
+  .parent-icon {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .nav-active {
+    a {
+      color: #000;
+    }
+  }
+  .nav-open {
+    display: block;
+    > ul {
+      display: block;
+    }
+  }
+  .sidebar-nav-sub {
+    padding: 0 0 5px 15px;
+    display: none;
+    a {
+      color: #8f919e;
+      &:hover {
+        color: #000;
+      }
+    }
+    > li.nav-active {
+      > a {
+        color: #000;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 19px;
+          left: -14px;
+          width: 7px;
+          border-top: 2px solid #28ca69;
+          color: #000;
+        }
+      }
+    }
+  }
+}

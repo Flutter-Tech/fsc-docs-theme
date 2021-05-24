@@ -35,6 +35,12 @@ em {
   color: $global-color;
   font-style: italic;
 }
+
+h1, .uk-h1 {
+  border-bottom: 1px solid $global-primary-background;
+  padding-bottom: 10px;
+}
+
 blockquote {
   border-left: 4px solid $global-primary-background;
   padding: 10px 0 10px 10px;

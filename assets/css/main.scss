@@ -36,7 +36,8 @@ em {
   font-style: italic;
 }
 
-h1, .uk-h1 {
+h1,
+.uk-h1 {
   border-bottom: 1px solid $global-primary-background;
   padding-bottom: 10px;
 }
@@ -93,41 +94,32 @@ table {
 @media screen and (max-width: 600px) {
   table {
     border: 0;
-  }
-
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-
-  table tr {
-    background-color: #f1f1f1;
-    display: block;
-    margin-bottom: 0.625em;
-  }
-
-  table td {
-    display: block;
-    text-align: left;
-  }
-
-  table td::before {
-    /*
-      * aria-label has no advantage, it won't be read inside a table
-      content: attr(aria-label);
-      */
-    content: attr(data-label);
-    float: left;
-  }
-
-  table td:last-child {
-    border-bottom: 0;
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    tr {
+      background-color: #f1f1f1;
+      display: block;
+      margin-bottom: 0.625em;
+    }
+    td {
+      display: block;
+      text-align: left;
+      &::before {
+        content: attr(data-label);
+        float: left;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
   }
 }
 .top-navbar-sticky {
@@ -163,7 +155,7 @@ table {
     padding: 5px 5px 5px 0;
     list-style: none;
 
-    ul{
+    ul {
       padding: 5px 5px 0 8px;
     }
   }
@@ -178,12 +170,16 @@ table {
       list-style: none;
     }
 
-    &.uk-active > a::before {
-      content: "❯";
-      position: absolute;
-      left: 5px;
-      color: $global-primary-background;
-      transition: all 1.5s;
+    &.uk-active {
+      >a {
+        &::before {
+          content: "❯";
+          position: absolute;
+          left: 5px;
+          color: $global-primary-background;
+          transition: all 1.5s;
+        }
+      }
     }
 
     a {
@@ -253,19 +249,23 @@ table {
       text-decoration: none;
     }
   }
-  & > li.nav-active > a {
-    border-bottom: 2px solid #28ca69;
-  }
-  & > ul > li.nav-active > a {
-    border-bottom: 2px solid #28ca69;
+  & {
+    > li.nav-active {
+      > a {
+        border-bottom: 2px solid $global-primary-background;
+      }
+    }
+    > ul {
+      > li.nav-active {
+        > a {
+          border-bottom: 2px solid $global-primary-background;
+        }
+      }
+    }
   }
   .nav-parent {
     position: relative;
     > .parent-icon {
-      img {
-        width: 1.5em;
-        height: 1.5em;
-      }
       width: 1.5em;
       height: 1.5em;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.1%22%20points%3D%2210%201%204%207%2010%2013%22%20%2F%3E%0A%3C%2Fsvg%3E");
@@ -274,9 +274,16 @@ table {
       position: absolute;
       top: 6px;
       right: 0;
+
+      img {
+        width: 1.5em;
+        height: 1.5em;
+      }
     }
-    &.nav-active > a {
-      border-bottom: 2px solid #28ca69;
+    &.nav-active {
+      >a {
+        border-bottom: 2px solid $global-primary-background;
+      }
     }
     ul {
       li {

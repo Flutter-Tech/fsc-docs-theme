@@ -243,6 +243,9 @@ table {
       text-decoration: none;
     }
   }
+  & > li.nav-active > a {
+    border-bottom: 2px solid #28ca69;
+  }
   .nav-parent {
     position: relative;
     > .parent-icon {
@@ -258,6 +261,9 @@ table {
       position: absolute;
       top: 10px;
       right: 0;
+    }
+    &.nav-active > a {
+      border-bottom: 2px solid #28ca69;
     }
   }
   .nav-parent.nav-open {

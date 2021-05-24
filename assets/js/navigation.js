@@ -22,9 +22,7 @@ function toggleVerticalMenu(el) {
 function markMenu(menuElements) {
   for (let linkMenu of menuElements) {
     linkMenuHref = linkMenu.getAttribute("href");
-    console.log(linkMenuHref === window.location.pathname);
     if (linkMenuHref === window.location.pathname) {
-      console.log(linkMenuHref);
       linkMenuParent = linkMenu.parentNode;
     }
   }

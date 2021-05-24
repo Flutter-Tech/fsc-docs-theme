@@ -214,14 +214,14 @@ table {
 }
 .sidebar-docs {
   ul {
-      list-style: none;
-      list-style-position: outside;
-      padding: 0;
-      position: relative;
+    list-style: none;
+    list-style-position: outside;
+    padding: 0;
+    position: relative;
 
-      li{
-        padding: 6px 0 0 0;
-      }
+    li {
+      padding: 6px 0 0 0;
+    }
   }
 }
 .sidebar-nav {
@@ -315,6 +315,25 @@ table {
           width: 7px;
           border-top: 2px solid #28ca69;
           color: #000;
+        }
+      }
+    }
+  }
+}
+.uk-offcanvas-bar {
+  .sidebar-docs {
+    margin-left: 9px;
+    ul {
+      li {
+        padding: 10px 0 0 0;
+      }
+    }
+  }
+  .sidebar-nav {
+    .nav-parent {
+      ul {
+        li {
+          padding: 10px 0 0 0;
         }
       }
     }

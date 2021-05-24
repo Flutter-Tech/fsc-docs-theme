@@ -212,6 +212,18 @@ table {
     }
   }
 }
+.sidebar-docs {
+  ul {
+      list-style: none;
+      list-style-position: outside;
+      padding: 0;
+      position: relative;
+
+      li{
+        padding: 6px 0;
+      }
+  }
+}
 .sidebar-nav {
   font-size: 0.875rem;
   ul {

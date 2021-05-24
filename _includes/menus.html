@@ -10,6 +10,11 @@
     <a href="{{ item.url }}" title="Go to {{ item.title }}" class="menu-link"
       >{{ item.title }}</a
     >
+    <div class="parent-icon">
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+      />
+    </div>
     {% assign menu = item.children %} {% include menus.html submenu="yes" %}
   </li>
   {% else %}

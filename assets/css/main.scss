@@ -316,15 +316,6 @@ table {
     > li.nav-active {
       > a {
         color: #000;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 15px;
-          left: -14px;
-          width: 7px;
-          border-top: 2px solid #28ca69;
-          color: #000;
-        }
       }
     }
   }

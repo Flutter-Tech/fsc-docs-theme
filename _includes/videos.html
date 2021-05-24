@@ -1,5 +1,19 @@
+{% if include.columns %}
+    {% assign columns = include.columns %}
+    {% if columns == '1' %}
+        {% assign container = ' uk-container-xsmall' %}
+    {% elsif columns == '2' %}
+        {% assign container = ' uk-container-small' %}
+    {% else %}
+        {% assign container = '' %}
+    {% endif %}
+{% else %}
+    {% assign columns = 3 %}
+    {% assign container = '' %}
+{% endif %}
+
 <div class="uk-section section-videos">
-    <div class="uk-container uk-width-expand">
+    <div class="uk-container{{container}}">
 
         {% if include.title %}
             <h2 class="uk-h1">{{ include.title }}</h2>
@@ -7,7 +21,7 @@
 
         {% if include.subtitle %}<p class="uk-text-lead">{{ include.subtitle | escape }}</p>{% endif %}
 
-        <div class="uk-child-width-1-2@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid data-uk-lightbox>
+        <div class="uk-child-width-1-{{ columns }}@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid data-uk-lightbox>
         {% for item in site.data.videos %}
             <div>
                 <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium uk-card-body uk-inline border-radius-large border-xlight">

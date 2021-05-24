@@ -249,6 +249,9 @@ table {
       text-decoration: none;
     }
   }
+  & > li.nav-active > a {
+    border-bottom: 2px solid #28ca69;
+  }
   & > ul > li.nav-active > a {
     border-bottom: 2px solid #28ca69;
   }

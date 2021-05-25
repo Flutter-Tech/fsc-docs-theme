@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const scrollLimit = 28;
   const widthLimit = 540;
   var el = document.querySelector(".search-container");
-  console.log(width)
+  console.log(width);
   if (width < widthLimit) {
-    console.log('inside addEventlistener:', width < widthLimit);
+    console.log("inside addEventlistener:", width < widthLimit);
     window.addEventListener("scroll", onScroll(scrollY, el, scrollLimit));
   }
 });
@@ -68,15 +68,15 @@ function findElementByClassUrl(cssclass, url) {
 }
 // hides element when scroll Y is above a defined value
 function onScroll(scrollY, el, scrollLimit) {
-  console.log('inside scroll');
+  console.log("inside scroll");
   var doc = document.documentElement;
-  console.log('doc:', doc);
-  console.log('scrolly:', scrolly);
+  console.log("doc:", doc);
+  console.log("scrolly:", scrollY);
   if (doc.scrollTop !== scrollY && doc.scrollTop > scrollLimit) {
     scrollY = doc.scrollTop;
     el.hidden = true;
   } else {
     el.hidden = false;
   }
-  console.log('scrolly out:', scrolly);
+  console.log("scrolly out:", scrollY);
 }

@@ -6,7 +6,17 @@
           {% assign menu = site.data.menus.main %} {% include menus.html %}
         </div>
       </div>
-      {% if page.toc %}
+      {% if page.toc == false %}
+      <div class="uk-width-1-2@m uk-column-divider uk-position-relative main-content-margin">
+        <article class="uk-article">
+          {{ content }}
+          {% if page.article_navigation %}
+          {% include paginate-articles.html %}
+          {% endif %}
+        </article>
+        <div class="tm-sidebar-right uk-visible@m"></div>
+      </div>
+      {% else %}
       <div class="uk-width-1-2@m uk-column-divider uk-position-relative main-content-margin">
         <article class="uk-article">
           {{ content }}
@@ -19,16 +29,6 @@
           {% include toc.html html=content class="uk-scrollspy-nav" ukscrollspynav="closest: li; scroll: true; offset: 130" h_min=2 h_max=3 %}
           </div>
         </div>
-      </div>
-      {% else %}
-      <div class="uk-width-1-2@m uk-column-divider uk-position-relative main-content-margin">
-        <article class="uk-article">
-          {{ content }}
-          {% if page.article_navigation %}
-          {% include paginate-articles.html %}
-          {% endif %}
-        </article>
-        <div class="tm-sidebar-right uk-visible@m"></div>
       </div>
       {% endif %}
     </div>

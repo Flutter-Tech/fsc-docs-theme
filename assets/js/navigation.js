@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log(width);
   if (width < widthLimit) {
     console.log("inside addEventlistener:", width < widthLimit);
-    window.addEventListener("scroll", onScroll(scrollY, el, scrollLimit));
+    window.addEventListener("scroll", function () {
+      onScroll(scrollY, el, scrollLimit);
+    });
   }
 });
 //Adds css class to open element

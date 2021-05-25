@@ -35,6 +35,13 @@ em {
   color: $global-color;
   font-style: italic;
 }
+
+h1,
+.uk-h1 {
+  border-bottom: 1px solid $global-primary-background;
+  padding-bottom: 10px;
+}
+
 blockquote {
   border-left: 4px solid $global-primary-background;
   padding: 10px 0 10px 10px;
@@ -57,7 +64,7 @@ table {
   margin: 0;
   padding: 0;
   width: 100%;
-  table-layout: fixed;
+  table-layout: auto;
 
   caption {
     font-size: 0.7rem;
@@ -87,41 +94,32 @@ table {
 @media screen and (max-width: 600px) {
   table {
     border: 0;
-  }
-
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-
-  table tr {
-    background-color: #f1f1f1;
-    display: block;
-    margin-bottom: 0.625em;
-  }
-
-  table td {
-    display: block;
-    text-align: left;
-  }
-
-  table td::before {
-    /*
-      * aria-label has no advantage, it won't be read inside a table
-      content: attr(aria-label);
-      */
-    content: attr(data-label);
-    float: left;
-  }
-
-  table td:last-child {
-    border-bottom: 0;
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    tr {
+      background-color: #f1f1f1;
+      display: block;
+      margin-bottom: 0.625em;
+    }
+    td {
+      display: block;
+      text-align: left;
+      &::before {
+        content: attr(data-label);
+        float: left;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
   }
 }
 .top-navbar-sticky {
@@ -154,8 +152,12 @@ table {
   }
 
   ul {
-    padding: 0 5px;
+    padding: 5px 5px 5px 0;
     list-style: none;
+
+    ul {
+      padding: 5px 5px 0 8px;
+    }
   }
 
   li {
@@ -168,12 +170,16 @@ table {
       list-style: none;
     }
 
-    &.uk-active > a::before {
-      content: "❯";
-      position: absolute;
-      left: 8px;
-      color: $global-primary-background;
-      transition: all 1.5s;
+    &.uk-active {
+      >a {
+        &::before {
+          content: "❯";
+          position: absolute;
+          left: 5px;
+          color: $global-primary-background;
+          transition: all 1.5s;
+        }
+      }
     }
 
     a {
@@ -194,5 +200,153 @@ table {
 .uk-scrollspy-nav {
   & > .uk-active {
     color: $global-primary-background;
+  }
+}
+
+.sidebar-docs {
+  > ul {
+    > li {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.4;
+      > ul {
+        > li {
+          font-weight: normal;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.sidebar-docs {
+  ul {
+    list-style: none;
+    list-style-position: outside;
+    padding: 0;
+    position: relative;
+
+    li {
+      padding: 6px 0 0 0;
+    }
+  }
+}
+.sidebar-nav {
+  font-size: 0.875rem;
+  ul {
+    li {
+      list-style: none;
+      list-style-position: outside;
+      padding: 6px 0 0 0;
+      position: relative;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #666;
+    padding-right: 15px;
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  & {
+    > li.nav-active {
+      > a {
+        border-bottom: 2px solid $global-primary-background;
+      }
+    }
+    > ul {
+      > li.nav-active {
+        > a {
+          border-bottom: 2px solid $global-primary-background;
+        }
+      }
+    }
+  }
+  .nav-parent {
+    position: relative;
+    > .parent-icon {
+      width: 1.5em;
+      height: 1.5em;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.1%22%20points%3D%2210%201%204%207%2010%2013%22%20%2F%3E%0A%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      position: absolute;
+      top: 6px;
+      right: 0;
+
+      img {
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+    &.nav-active {
+      >a {
+        border-bottom: 2px solid $global-primary-background;
+      }
+    }
+    ul {
+      li {
+        list-style: none;
+        list-style-position: outside;
+        padding: 6px 0 0 0;
+        position: relative;
+      }
+    }
+  }
+  .nav-parent.nav-open {
+    > .parent-icon {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.1%22%20points%3D%221%204%207%2010%2013%204%22%20%2F%3E%0A%3C%2Fsvg%3E");
+    }
+  }
+  .parent-icon {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .nav-active {
+    a {
+      color: #000;
+    }
+  }
+  .nav-open {
+    display: block;
+    > ul {
+      display: block;
+    }
+  }
+  .sidebar-nav-sub {
+    padding: 0 0 5px 15px;
+    display: none;
+    a {
+      color: #8f919e;
+      &:hover {
+        color: #000;
+      }
+    }
+    > li.nav-active {
+      > a {
+        color: #000;
+      }
+    }
+  }
+}
+.uk-offcanvas-bar {
+  .sidebar-docs {
+    margin-left: 9px;
+    ul {
+      li {
+        padding: 10px 0 0 0;
+      }
+    }
+  }
+  .sidebar-nav {
+    .nav-parent {
+      ul {
+        li {
+          padding: 10px 0 0 0;
+        }
+      }
+    }
   }
 }

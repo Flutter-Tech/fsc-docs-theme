@@ -12,6 +12,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // Opens parent menus
   const menuElements = findElementByClassUrl("menu-link", window.location.href);
   openMenus(menuElements);
+  //Hides search box when document body width below 539px
+  var scrollY = 0;
+  var width =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+  const scrollLimit = 28;
+  const widthLimit = 540;
+  var el = document.querySelector(".search-container");
+  if (width < widthLimit) {
+    window.addEventListener("scroll", function () {
+      onScroll(scrollY, el, scrollLimit);
+    });
+  }
 });
 //Adds css class to open element
 function toggleVerticalMenu(el) {
@@ -51,4 +65,14 @@ function findElementByClassUrl(cssclass, url) {
     }
   }
   return found;
+}
+// hides element when scroll Y is above a defined value
+function onScroll(scrollY, el, scrollLimit) {
+  var doc = document.documentElement;
+  if (doc.scrollTop !== scrollY && doc.scrollTop > scrollLimit) {
+    scrollY = doc.scrollTop;
+    el.hidden = true;
+  } else {
+    el.hidden = false;
+  }
 }

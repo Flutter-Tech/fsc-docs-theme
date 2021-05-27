@@ -171,7 +171,7 @@ table {
     }
 
     &.uk-active {
-      >a {
+      > a {
         &::before {
           content: "❯";
           position: absolute;
@@ -281,7 +281,7 @@ table {
       }
     }
     &.nav-active {
-      >a {
+      > a {
         border-bottom: 2px solid $global-primary-background;
       }
     }
@@ -348,5 +348,38 @@ table {
         }
       }
     }
+  }
+}
+@media screen and (max-width: 539px) {
+  .search-container {
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    width: 280px;
+    margin-right: 0;
+  }
+  .search {
+    position: relative;
+    left: -50%;
+  }
+  .search-active {
+    .search {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+  }
+  .uk-article {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 612px) {
+  h1,
+  .uk-h1 {
+    font-size: 1.7rem;
+    line-height: 1.2;
   }
 }

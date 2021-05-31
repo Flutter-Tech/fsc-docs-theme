@@ -123,7 +123,7 @@ table {
 }
 .top-navbar-sticky {
   width: 100%;
-  background-color: #fff;
+  background-color: $white;
   z-index: 2;
 }
 .main-content-margin {
@@ -185,7 +185,7 @@ table {
       color: #666;
       transition: all 0.5s;
       &:hover {
-        color: #000;
+        color: $global-color;
         text-decoration: none;
       }
     }
@@ -244,7 +244,7 @@ table {
     color: #666;
     padding-right: 15px;
     &:hover {
-      color: #000;
+      color: $global-color;
       text-decoration: none;
     }
   }
@@ -305,7 +305,7 @@ table {
   }
   .nav-active {
     a {
-      color: #000;
+      color: $global-color;
     }
   }
   .nav-open {
@@ -320,12 +320,12 @@ table {
     a {
       color: #8f919e;
       &:hover {
-        color: #000;
+        color: $global-color;
       }
     }
     > li.nav-active {
       > a {
-        color: #000;
+        color: $global-color;
       }
     }
   }
@@ -380,5 +380,77 @@ table {
   .uk-h1 {
     font-size: 1.7rem;
     line-height: 1.2;
+  }
+}
+.internal-site {
+  .uk-navbar-container {
+    &:not(.uk-navbar-transparent) {
+      background: $global-primary-background;
+    }
+  }
+  .uk-navbar-nav {
+    > li {
+      > a {
+        color: $white;
+        &:hover {
+          color: $white;
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+    > li.uk-active {
+      > a {
+        color: $white;
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+  .uk-navbar {
+    .uk-button-success {
+      background-color: $white;
+      color: $global-primary-background;
+      border: 1px solid transparent;
+    }
+  }
+  .uk-logo {
+    img {
+      filter: brightness(0) invert(1);
+      margin-top: -10px;
+    }
+    &::after {
+      content: "community";
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      color: $whitefff;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+  .uk-offcanvas-bar {
+    .uk-logo {
+      img {
+        filter: brightness(1) invert(0);
+        margin-top: 0;
+      }
+    }
+  }
+  .search-overlay {
+    background-color: rgba(54, 136, 206, 0.3);
+  }
+  .uk-navbar-toggle {
+    color: $white;
+    &:hover {
+      color: $global-color;
+    }
+  }
+}
+@media screen and (max-width: 959px) {
+  .internal-site {
+    .uk-logo {
+      &::after {
+        left: -5px;
+      }
+    }
   }
 }

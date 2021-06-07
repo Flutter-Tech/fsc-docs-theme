@@ -201,7 +201,13 @@ table {
     color: $global-primary-background;
   }
 }
-
+.uk-article {
+  img {
+    margin: 10px 10px 10px 0;
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+  }
+}
 .sidebar-docs {
   > ul {
     > li {
@@ -373,12 +379,6 @@ table {
   }
   .uk-article {
     margin-top: 10px;
-    
-    img{
-      margin: 10px 10px 10px 0;
-      border: 1px solid #E3E3E3;
-      border-radius: 2px;
-    }
   }
 }
 @media screen and (max-width: 612px) {

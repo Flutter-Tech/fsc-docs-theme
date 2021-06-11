@@ -3,7 +3,7 @@
 
     {% include head.html %}
 
-    <body>
+    <body{% if site.internal %} class="internal-site"{% endif %}>
      
     {% if page.hero %}
         {% include hero.html %}

@@ -208,6 +208,15 @@ table {
     border-radius: 2px;
   }
 }
+.article-content.uk-accordion-content {
+  ul {
+    li {
+      ul{
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
 .sidebar-docs {
   > ul {
     > li {

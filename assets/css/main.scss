@@ -392,6 +392,16 @@ table {
 .repo-description {
 	font-size: 22px;
 }
+.badge-container {
+	margin-top: -20px;
+	text-align: center;
+	+ {
+		h2 {
+			margin-top: 30px;
+		}
+	}
+}
+
 @media screen and (max-width: 539px) {
   .search-container {
     position: absolute;

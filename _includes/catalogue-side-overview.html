@@ -1,0 +1,20 @@
+{{% if page.catalogue_side_overview_title %}}
+<div class="catalogue-title">{{ page.catalogue_side_overview_title }}</div>
+{{% endif %}}
+<ul class="tree">
+  {% if page.catalogue_side_overview_elements.size > 0 %}
+  <li>{{ page.catalogue_side_overview_elements[0] }}
+    {% if page.catalogue_side_overview_elements.size > 1 %}
+    <ul>
+      <li>{{ page.catalogue_side_overview_elements[1] }}
+        {% if page.catalogue_side_overview_elements.size > 2 %}
+        <ul>
+          <li>{{ page.catalogue_side_overview_elements[2] }}</li>
+        </ul>
+        {% endif %}
+      </li>
+    </ul>
+    {% endif %}
+  </li>
+  {% endif %}
+</ul>

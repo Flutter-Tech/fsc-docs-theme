@@ -21,7 +21,11 @@
           {% include paginate-articles.html %}
           {% endif %}
         </article>
-        <div class="tm-sidebar-right uk-visible@m"></div>
+        <div class="tm-sidebar-right uk-visible@m">
+          {% if page.catalogue_treeview %}
+          {% include catalogue-treeview.html %}
+          {% endif %}
+        </div>
       </div>
       {% else %}
       <div class="uk-width-1-2@m uk-column-divider uk-position-relative main-content-margin">
@@ -37,6 +41,9 @@
         <div class="tm-sidebar-right uk-visible@m">
           <div uk-sticky="offset: 140" class="uk-sticky uk-active uk-sticky-below uk-sticky-fixed">
           {% include toc.html html=content class="uk-scrollspy-nav" ukscrollspynav="closest: li; scroll: true; offset: 130" %}
+          {% if page.catalogue_side_overview %}
+          {% include catalogue-side-overview.html %}
+          {% endif %}
           </div>
         </div>
       </div>

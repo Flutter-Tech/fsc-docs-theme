@@ -2,7 +2,11 @@
     <ul>
       <li><a href="/catalogue">Product catalogue</a></li>
       {% for item in page.breadcrumbs %}
-      <li><a href="/catalogue/{{item}}">{{item}}</a></li>
+        {% if page.url == "/catalogue/{{item}}" %}
+        <li>{{item}}</li>
+        {% else %}
+        <li><a href="/catalogue/{{item}}">{{item}}</a></li>
+        {% endif %}
       {% endfor %}
     </ul>
   </nav>

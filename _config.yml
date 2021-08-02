@@ -3,6 +3,9 @@ title: Flutter Docs
 description: Find, Learn, Love...
 lang: en
 
+# Applies internal css class to change theme
+internal: false
+
 # Site subpath, e.g. /blog
 baseurl: ""
 
@@ -11,6 +14,11 @@ permalink: /:title/
 
 # Site base hostname & protocol, e.g. http://example.com
 url: ""
+
+# Breadcrumb base url and title
+breadcrumbs:
+  home_title: "Product catalogue"
+  home_url: "/catalogue"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo: ""
@@ -83,7 +91,6 @@ uploads: /uploads/
 markdown: kramdown
 highlighter: rouge
 input: GFM
-
 
 plugins:
   - jekyll-feed

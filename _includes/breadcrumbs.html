@@ -1,11 +1,13 @@
 <nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
     <ul>
-      <li><a href="/catalogue">Product catalogue</a></li>
+      {% if site.breadcrumbs.home_title && site.breadcrumbs.home_url %}
+      <li><a href="{{ site.breadcrumbs.home_url }}">{{ site.breadcrumbs.home_title }}</a></li>
+      {% endif %}
       {% for item in page.breadcrumbs %}
-        {% if page.url == "/catalogue/{{item}}" %}
+        {% if page.url contains "{{item}}" %}
         <li>{{item}}</li>
         {% else %}
-        <li><a href="/catalogue/{{item}}">{{item}}</a></li>
+        <li><a href="{{ site.breadcrumbs.home_url }}/{{item}}">{{item}}</a></li>
         {% endif %}
       {% endfor %}
     </ul>

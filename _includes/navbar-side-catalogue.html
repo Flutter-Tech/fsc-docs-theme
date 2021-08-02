@@ -26,6 +26,9 @@
       {% else %}
       <div class="uk-width-1-2@m uk-column-divider uk-position-relative main-content-margin">
         <article class="uk-article">
+          {% if page.breadcrumbs %}
+          {% include breadcrumbs.html %}
+          {% endif %}
           {{ content }}
           {% if page.article_navigation %}
           {% include paginate-articles.html %}

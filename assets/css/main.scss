@@ -211,7 +211,7 @@ table {
 .article-content.uk-accordion-content {
   ul {
     li {
-      ul{
+      ul {
         margin-bottom: 15px;
       }
     }
@@ -365,83 +365,42 @@ table {
   }
 }
 .breadcrumb {
-	ul {
-		margin: 0;
-		padding: 0;
-		li {
-			display: inline-block;
-			padding: 0;
-			margin: 0;
-			font-size: 12px;
-			&::before {
-				content: '> ';
-			}
-			&:first-child {
-				&::before {
-					content: '';
-				}
-			}
-		}
-	}
-	+ {
-		h1 {
-			margin-top: 10px;
-		}
-	}
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+      &::before {
+        content: "> ";
+      }
+      &:first-child {
+        &::before {
+          content: "";
+        }
+      }
+    }
+  }
+  + {
+    h1 {
+      margin-top: 10px;
+    }
+  }
 }
 .repo-description {
-	font-size: 22px;
+  font-size: 22px;
 }
 .badge-container {
-	margin-top: -20px;
-	text-align: center;
-	+ {
-		h2 {
-			margin-top: 30px;
-		}
-	}
+  margin-top: -20px;
+  text-align: center;
+  + {
+    h2 {
+      margin-top: 30px;
+    }
+  }
 }
-.catalogue-title{
-    text-transform: uppercase;
-    padding: 5px 0 5px 0;
-    display: block;
-}
-ul.tree {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		margin-left: 5px;
-	}
-	li {
-		margin: 0;
-		padding: 0 3px;
-		line-height: 15px;
-		border-left: 1px solid #39f;
-		font-size: 12px;
-		&:last-child {
-			border-left: none;
-			&:before {
-				border-left: 1px solid #39f;
-			}
-		}
-		&:before {
-			position: relative;
-			top: -0.3em;
-			height: 1em;
-			width: 12px;
-			color: white;
-			border-bottom: 1px solid #39f;
-			content: "";
-			display: inline-block;
-			left: -3px;
-		}
-	}
-}
-
 @media screen and (max-width: 539px) {
   .search-container {
     position: absolute;

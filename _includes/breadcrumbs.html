@@ -1,0 +1,9 @@
+<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="/catalogue">Product catalogue</a></li>
+      {% for item in page.breadcrumbs %}
+      <li><a href="/catalogue/{{item}}">{{item}}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</nav>

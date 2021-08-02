@@ -1,0 +1,43 @@
+<div class="uk-section">
+  <div class="uk-container uk-container-expand">
+    <div class="uk-grid-large" data-uk-grid>
+      <div class="sidebar-fixed-width uk-visible@m">
+        <div class="sidebar-docs docs-nav uk-position-fixed uk-margin-top">
+        {% if site.internal %}
+          {% assign menu = site.data.menus_internal.main %} {% include menus.html %}
+        {% else %}
+          {% assign menu = site.data.menus.main %} {% include menus.html %}
+        {% endif %}
+        </div>
+      </div>
+      {% if page.toc == false %}
+      <div class="uk-width-1-2@m uk-column-divider uk-position-relative main-content-margin">
+        <article class="uk-article">
+          {% if page.breadcrumbs %}
+          {% include breadcrumbs.html %}
+          {% endif %}
+          {{ content }}
+          {% if page.article_navigation %}
+          {% include paginate-articles.html %}
+          {% endif %}
+        </article>
+        <div class="tm-sidebar-right uk-visible@m"></div>
+      </div>
+      {% else %}
+      <div class="uk-width-1-2@m uk-column-divider uk-position-relative main-content-margin">
+        <article class="uk-article">
+          {{ content }}
+          {% if page.article_navigation %}
+          {% include paginate-articles.html %}
+          {% endif %}
+        </article>
+        <div class="tm-sidebar-right uk-visible@m">
+          <div uk-sticky="offset: 140" class="uk-sticky uk-active uk-sticky-below uk-sticky-fixed">
+          {% include toc.html html=content class="uk-scrollspy-nav" ukscrollspynav="closest: li; scroll: true; offset: 130" %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

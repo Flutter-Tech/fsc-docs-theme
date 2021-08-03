@@ -4,11 +4,7 @@
       <li><a href="{{ site.breadcrumbs.home_url }}">{{ site.breadcrumbs.home_title }}</a></li>
       {% endif %}
       {% for item in page.breadcrumbs %}
-        {% if page.url contains "{{item}}" %}
-        <li>{{item}}</li>
-        {% else %}
         <li><a href="{{ site.breadcrumbs.home_url }}/{{item}}">{{item}}</a></li>
-        {% endif %}
       {% endfor %}
     </ul>
   </nav>

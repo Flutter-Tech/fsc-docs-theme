@@ -460,7 +460,9 @@ table {
     }
   }
 }
-
+sub sup{
+  display: none;
+}
 @media screen and (max-width: 539px) {
   .search-container {
     position: absolute;

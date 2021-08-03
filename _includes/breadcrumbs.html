@@ -1,0 +1,11 @@
+<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+    <ul>
+      {% if site.breadcrumbs.home_title && site.breadcrumbs.home_url %}
+      <li><a href="{{ site.breadcrumbs.home_url }}">{{ site.breadcrumbs.home_title }}</a></li>
+      {% endif %}
+      {% for item in page.breadcrumbs %}
+        <li><a href="{{ site.breadcrumbs.home_url }}/{{item}}">{{item}}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</nav>

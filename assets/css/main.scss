@@ -463,6 +463,15 @@ table {
 sub sup{
   display: none;
 }
+// Positions the page with an offset when using anchors to id
+:target::before {
+  content: "";
+  display: block;
+  margin-top: -130px;
+  height: 130px;
+  pointer-events: none;
+  animation: 0s 1s forwards collapse-anchor-padding-1;
+}
 @media screen and (max-width: 539px) {
   .search-container {
     position: absolute;

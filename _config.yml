@@ -17,8 +17,8 @@ url: ""
 
 # Breadcrumb base url and title
 breadcrumbs:
-  home_title: "Product catalogue"
-  home_url: "/catalogue"
+  home_title: "Home"
+  home_url: "/"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo: ""
@@ -91,6 +91,9 @@ uploads: /uploads/
 markdown: kramdown
 highlighter: rouge
 input: GFM
+
+kramdown:
+  auto_ids: true
 
 plugins:
   - jekyll-feed

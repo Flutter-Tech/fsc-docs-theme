@@ -427,7 +427,6 @@ fdt.onReady(function(){
   const hierarchyTree = document.querySelector("#hierarchy-tree");
   if(hierarchyTree) {
     // Open and close a single tree branch
-    const hierarchyTree = document.querySelector("#hierarchy-tree");
     let hierarchyBranches = hierarchyTree.querySelectorAll(".hierarchy-parent");
   
     hierarchyBranches.forEach(function (branch) {

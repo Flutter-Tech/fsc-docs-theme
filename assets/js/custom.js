@@ -415,12 +415,65 @@ function searchLoaded(index, docs) {
 }
 {% endif %}
 
+function initHierarchyTree(){
+  const hierarchyTree = document.querySelector("#hierarchy-tree");
+  if(hierarchyTree) {
+    // Open and close a single tree branch
+    let hierarchyBranches = hierarchyTree.querySelectorAll(".hierarchy-parent");
+  
+    hierarchyBranches.forEach(function (branch) {
+      // Removes open symbol if there's no children
+      if (branch.getElementsByTagName("ul").length == 0) {
+        let childrenMarker = branch.querySelector("span");
+  
+        if (childrenMarker) {
+          childrenMarker.classList.remove("symbol");
+          childrenMarker.classList.add("symbol-spacer");
+        }
+      }
+  
+      // Toggles open in branch
+      branch.addEventListener(
+        "click",
+        (event) => {
+          event.target.classList.toggle("open");
+        },
+        true
+      );
+    });
+  
+    // Expand all tree branches
+    const expandTreeBtn = document.querySelector("#expandTreeBtn");
+  
+    expandTreeBtn.addEventListener("click", (event) => {
+      hierarchyBranches.forEach(function (branch) {
+        if (!branch.classList.contains("open")) {
+          branch.classList.add("open");
+        }
+      });
+    });
+  
+    // Collapse all tree branches
+    const collapseTreeBtn = document.querySelector("#collapseTreeBtn");
+  
+    collapseTreeBtn.addEventListener("click", (event) => {
+      hierarchyBranches.forEach(function (branch) {
+        if (branch.classList.contains("open")) {
+          branch.classList.remove("open");
+        }
+      });
+    });
+  };
+}
 
 // Document ready
 
 fdt.onReady(function(){
   initNav();
+  initHierarchyTree();
   {% if site.search_enabled != false %}
   initSearch();
   {% endif %}
+});
+
 })(window.fdt = window.fdt || {});

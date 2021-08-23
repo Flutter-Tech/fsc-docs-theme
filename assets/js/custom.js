@@ -450,6 +450,29 @@ function initHierarchyTree(){
         true
       );
     }
+  });
+
+  // Expand all tree branches
+  const expandTreeBtn = document.querySelector("#expandTreeBtn");
+
+  expandTreeBtn.addEventListener("click", (event) => {
+    hierarchyBranches.forEach(function (branch) {
+      if (!branch.classList.contains("open")) {
+        branch.classList.add("open");
+      }
+    });
+  });
+
+  // Collapse all tree branches
+  const collapseTreeBtn = document.querySelector("#collapseTreeBtn");
+
+  collapseTreeBtn.addEventListener("click", (event) => {
+    hierarchyBranches.forEach(function (branch) {
+      if (branch.classList.contains("open")) {
+        branch.classList.remove("open");
+      }
+    });
+  });
 }
 
 // Document ready

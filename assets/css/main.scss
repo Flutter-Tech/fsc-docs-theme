@@ -484,8 +484,9 @@ table {
     }
   }
   .symbol {
-    margin-top: -2px;
-    
+    position: relative;
+    top: -2px;
+
     &:before {
       content: "⊞";
       display: inline-block;

@@ -493,7 +493,14 @@ table {
     }
   }
 }
-
+#expandTreeBtn,
+#collapseTreeBtn {
+  font-size: 11px;
+  text-transform: lowercase;
+  font-weight: bold;
+  padding-bottom: 5px;
+  vertical-align: super;
+}
 sub sup {
   display: none;
 }

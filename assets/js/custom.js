@@ -423,7 +423,7 @@ fdt.onReady(function(){
   {% if site.search_enabled != false %}
   initSearch();
   {% endif %}
-
+  
   const hierarchyTree = document.querySelector("#hierarchy-tree");
   if(hierarchyTree) {
     // Open and close a single tree branch
@@ -472,5 +472,4 @@ fdt.onReady(function(){
       });
     });
   };
-
 })(window.fdt = window.fdt || {});

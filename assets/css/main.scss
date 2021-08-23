@@ -483,6 +483,14 @@ table {
       }
     }
   }
+  .hierarchy-parent.open {
+    >ul {
+      position: relative;
+      left: -5px;
+      top: -9px;
+      padding-top: 15px;
+    }
+  }
   .symbol {
     position: relative;
     top: -2px;

@@ -415,11 +415,71 @@ function searchLoaded(index, docs) {
 }
 {% endif %}
 
+function initHierarchyTree(){
+  // Open and close a single tree branch
+  const hierarchyTree = document.querySelector("#hierarchy-tree");
+  let hierarchyBranches = hierarchyTree.querySelectorAll(".hierarchy-parent");
+
+  hierarchyBranches.forEach(function (branch) {
+    // Removes open symbol if there's no children
+    if (branch.getElementsByTagName("ul").length == 0) {
+      let childrenMarker = branch.querySelector("span");
+
+      if (childrenMarker) {
+        childrenMarker.classList.toggle("symbol");
+      }
+    }
+
+    // Toggles open in branch
+    branch.addEventListener(
+      "click",
+      (event) => {
+        event.target.classList.toggle("open");
+      },
+      true
+    );
+
+    // Toggles open in icon
+    const branchIcon = branch.querySelector("span");
+    if (branchIcon) {
+      branchIcon.addEventListener(
+        "click",
+        (event) => {
+          event.target.parentNode.classList.toggle("open");
+        },
+        true
+      );
+    }
+  });
+
+  // Expand all tree branches
+  const expandTreeBtn = document.querySelector("#expandTreeBtn");
+
+  expandTreeBtn.addEventListener("click", (event) => {
+    hierarchyBranches.forEach(function (branch) {
+      if (!branch.classList.contains("open")) {
+        branch.classList.add("open");
+      }
+    });
+  });
+
+  // Collapse all tree branches
+  const collapseTreeBtn = document.querySelector("#collapseTreeBtn");
+
+  collapseTreeBtn.addEventListener("click", (event) => {
+    hierarchyBranches.forEach(function (branch) {
+      if (branch.classList.contains("open")) {
+        branch.classList.remove("open");
+      }
+    });
+  });
+}
 
 // Document ready
 
 fdt.onReady(function(){
   initNav();
+  initHierarchyTree();
   {% if site.search_enabled != false %}
   initSearch();
   {% endif %}

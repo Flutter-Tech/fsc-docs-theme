@@ -431,7 +431,6 @@ table {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
     border-left: 1px solid;
   }
   li {
@@ -439,6 +438,8 @@ table {
     padding: 0 1.5em;
     line-height: 2em;
     position: relative;
+    display: none;
+    cursor: pointer;
     &:before {
       content: "";
       display: block;
@@ -459,8 +460,59 @@ table {
       }
     }
   }
+  > li {
+    display: block;
+    > ul {
+      > li {
+        display: block;
+      }
+    }
+  }
+  li.open {
+    ul {
+      > li {
+        display: block;
+      }
+    }
+    .symbol {
+      &:before {
+        content: "⊟";
+        display: inline-block;
+        width: 15px;
+        margin-left: -4px;
+      }
+    }
+  }
+  .hierarchy-parent.open {
+    >ul {
+      position: relative;
+      left: -5px;
+      top: -9px;
+      padding-top: 15px;
+    }
+  }
+  .symbol {
+    position: relative;
+    top: -2px;
+
+    &:before {
+      content: "⊞";
+      display: inline-block;
+      width: 15px;
+      margin-right: 5px;
+      margin-left: -4px;
+    }
+  }
 }
-sub sup{
+#expandTreeBtn,
+#collapseTreeBtn {
+  font-size: 11px;
+  text-transform: lowercase;
+  font-weight: bold;
+  padding-bottom: 5px;
+  vertical-align: super;
+}
+sub sup {
   display: none;
 }
 // Positions the page with an offset when using anchors to id

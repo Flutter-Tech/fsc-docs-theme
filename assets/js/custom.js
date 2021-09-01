@@ -418,6 +418,8 @@ function searchLoaded(index, docs) {
 function initHierarchyTree(){
   // Open and close a single tree branch
   const hierarchyTree = document.querySelector("#hierarchy-tree");
+
+  if(typeof(hierarchyTree) != 'undefined' && hierarchyTree != null){
   let hierarchyBranches = hierarchyTree.querySelectorAll(".hierarchy-parent");
 
   hierarchyBranches.forEach(function (branch) {
@@ -473,6 +475,7 @@ function initHierarchyTree(){
       }
     });
   });
+}
 }
 
 // Document ready

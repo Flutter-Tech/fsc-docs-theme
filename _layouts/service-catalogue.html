@@ -110,9 +110,9 @@ breadcrumbs: page.breadcrumbs
 {% endif %}
 
 {% if site.data.statistics.maintainers %}
-<h2 id="top-maintainers">Top Maintainers</h2>
 {% for root in site.data.statistics.maintainers %}
   {% if root.repo == page.repo %}
+  <h2 id="top-maintainers">Top Maintainers</h2>
   {{ site.data.statistics.maintainers.top }}
     <ol>
     {% for maintainer in root.top %}

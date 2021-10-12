@@ -629,3 +629,81 @@ sub sup {
     }
   }
 }
+.community {
+	margin-top: 20px;
+	position: relative;
+	.uk-card {
+		position: relative;
+		.division-logo {
+			position: absolute;
+			top: 8px;
+			right: 5px;
+			width: 16px;
+		}
+	}
+}
+.catalogue {
+	.uk-card {
+		.uk-list-disc {
+			>* {
+				padding-left: 15px;
+			}
+		}
+		.uk-list-circle {
+			>* {
+				padding-left: 15px;
+			}
+		}
+		.uk-list-square {
+			>* {
+				padding-left: 15px;
+			}
+		}
+		.uk-list-decimal {
+			>* {
+				padding-left: 15px;
+			}
+		}
+		.uk-list-hyphen {
+			>* {
+				padding-left: 15px;
+			}
+		}
+	}
+	.uk-card-title {
+		font-size: 0.9rem;
+		font-weight: bold;
+		padding-top: 0;
+		border-bottom: 1px solid #f6f6f6;
+		min-height: 43px;
+		.profile-img {
+			margin: -3px 0 0 0;
+			padding: 0;
+			border-radius: 100%;
+		}
+	}
+	.uk-card-body {
+		font-size: 12px;
+		border: 1px solid #f6f6f6;
+		.division-logo {
+			margin: -2px 0 0 0;
+			padding: 0;
+		}
+	}
+	.clean-list {
+		margin: 15px 0 0 0;
+		padding: 0;
+		list-style: none;
+		li {
+			margin-top: 5px;
+		}
+	}
+}
+.catalogue.uk-card-small.uk-card-body {
+	padding: 15px 15px;
+}
+.catalogue.uk-card-small {
+	.uk-card-body {
+		padding: 15px 15px;
+	}
+}

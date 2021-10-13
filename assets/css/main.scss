@@ -91,6 +91,14 @@ table {
       padding-left: 5px;
     }
   }
+
+  td.shrink {
+		white-space: nowrap;
+		padding-right: 15px;
+	}
+	td.expand {
+		width: 99%;
+	}
 }
 @media screen and (max-width: 600px) {
   table {

@@ -678,6 +678,10 @@ sub sup {
 		padding-top: 0;
 		border-bottom: 1px solid #f6f6f6;
 		min-height: 43px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
 		.profile-img {
 			margin: -3px 0 0 0;
 			padding: 0;

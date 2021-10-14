@@ -39,6 +39,7 @@ h1,
 .uk-h1 {
   border-bottom: 1px solid $global-primary-background;
   padding-bottom: 10px;
+  font-size: 2rem;
 }
 
 blockquote {
@@ -80,6 +81,7 @@ table {
 
     &:first-child {
       padding-left: 5px;
+      vertical-align: baseline;
     }
   }
   td {
@@ -89,6 +91,14 @@ table {
       padding-left: 5px;
     }
   }
+
+  td.shrink {
+		white-space: nowrap;
+		padding-right: 15px;
+	}
+	td.expand {
+		width: 99%;
+	}
 }
 @media screen and (max-width: 600px) {
   table {
@@ -673,9 +683,13 @@ sub sup {
 	.uk-card-title {
 		font-size: 0.9rem;
 		font-weight: bold;
-		padding-top: 0;
+		padding-top: 3px;
 		border-bottom: 1px solid #f6f6f6;
 		min-height: 43px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
 		.profile-img {
 			margin: -3px 0 0 0;
 			padding: 0;
@@ -706,4 +720,8 @@ sub sup {
 	.uk-card-body {
 		padding: 15px 15px;
 	}
+}
+img.division-logo-table{
+  padding: 0;
+  margin: -2px 0 0 3px;
 }

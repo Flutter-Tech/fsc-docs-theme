@@ -639,16 +639,6 @@ sub sup {
     }
   }
 }
-.community {
-	margin-top: 20px;
-	position: relative;
-
-  .user-details {
-    border-bottom: 1px solid #f6f6f6;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-  }
-}
 .catalogue {
 	.uk-card {
 		.uk-list-disc {
@@ -721,4 +711,14 @@ sub sup {
 img.division-logo-table{
   padding: 0;
   margin: -2px 0 0 3px;
+}
+.community {
+	margin-top: 20px;
+	position: relative;
+
+  .user-details {
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
 }

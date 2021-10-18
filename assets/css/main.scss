@@ -639,19 +639,6 @@ sub sup {
     }
   }
 }
-.community {
-	margin-top: 20px;
-	position: relative;
-	.uk-card {
-		position: relative;
-		.division-logo {
-			position: absolute;
-			top: 8px;
-			right: 5px;
-			width: 16px;
-		}
-	}
-}
 .catalogue {
 	.uk-card {
 		.uk-list-disc {
@@ -691,7 +678,7 @@ sub sup {
     white-space: nowrap;
 
 		.profile-img {
-			margin: -3px 0 0 0;
+			margin: 0;
 			padding: 0;
 			border-radius: 100%;
 		}
@@ -702,6 +689,7 @@ sub sup {
 		.division-logo {
 			margin: -2px 0 0 0;
 			padding: 0;
+      border: 0;
 		}
 	}
 	.clean-list {
@@ -724,4 +712,14 @@ sub sup {
 img.division-logo-table{
   padding: 0;
   margin: -2px 0 0 3px;
+}
+.community {
+	margin-top: 20px;
+	position: relative;
+
+  .user-details {
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
 }

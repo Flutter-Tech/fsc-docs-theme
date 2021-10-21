@@ -729,11 +729,12 @@ img.division-logo-table{
 	}
 	span {
 		display: inline-block;
-		background: red;
-		padding: 2px 9px;
-		color: #ffffff;
-		font-weight: bold;
-		margin-top: -2px;
+		padding: 2px 0;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: -2px;
+    min-width: 28px;
+    text-align: center;
 	}
 	.stage-0 {
 		background: #273037;

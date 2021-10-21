@@ -723,3 +723,31 @@ img.division-logo-table{
     margin-bottom: 15px;
   }
 }
+.ins-stage {
+	&:hover {
+		text-decoration: none;
+	}
+	span {
+		display: inline-block;
+		background: red;
+		padding: 2px 9px;
+		color: #ffffff;
+		font-weight: bold;
+		margin-top: -2px;
+	}
+	.stage-0 {
+		background: #273037;
+	}
+	.stage-1 {
+		background: #28CB69;
+	}
+	.stage-2 {
+		background: #1188D6;
+	}
+	.stage-3 {
+		background: #7D49C2;
+	}
+	.stage-unavailable {
+		background: #666;
+	}
+}

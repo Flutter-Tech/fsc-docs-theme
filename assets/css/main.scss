@@ -721,5 +721,52 @@ img.division-logo-table{
     border-bottom: 1px solid #f6f6f6;
     padding-bottom: 15px;
     margin-bottom: 15px;
+
+    li{
+      padding-left: 5px;
+    }
   }
+  .uk-list{
+    &.uk-list-hyphen{
+      padding-left: 10px;
+    }
+  } 
+}
+.ins-stage {
+	&:hover {
+		text-decoration: none;
+	}
+	span {
+		display: inline-block;
+		padding: 2px 0;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: -2px;
+    min-width: 25px;
+    text-align: center;
+	}
+	.stage-0 {
+		background: #273037;
+	}
+	.stage-1 {
+		background: #28CB69;
+	}
+	.stage-2 {
+		background: #1188D6;
+	}
+	.stage-3 {
+		background: #7D49C2;
+	}
+	.stage-unavailable {
+		background: #666;
+	}
+}
+.user-logo {
+  display: inline-block;
+  width: 18px;
+  font-weight: bold;
+  border: 1px solid #c4c9cc;
+  text-align: center;
+  color: #273037;
+  border-radius: 10%;
 }

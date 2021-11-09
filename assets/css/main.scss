@@ -770,3 +770,30 @@ img.division-logo-table{
   color: #273037;
   border-radius: 10%;
 }
+.hostdivision {
+	display: inline-block;
+	>span {
+		display: inline;
+		font-weight: bold;
+		background-color: #f4f4f4;
+		position: relative;
+		padding: 12px 10px 13px 10px;
+		border-left: 1px solid #ccc;
+		margin: 0 10px;
+	}
+}
+@media screen and (min-width: 960px) and (max-width: 1293px) {
+	.hostdivision {
+		display: block;
+		padding-top: 10px;
+		>span {
+			display: inline;
+			font-weight: bold;
+			background-color: transparent;
+			position: relative;
+			padding: 0 10px 0 0;
+			border-left: 0;
+			margin: 0;
+		}
+	}
+}

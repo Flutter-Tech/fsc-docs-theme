@@ -513,6 +513,16 @@ table {
       margin-left: -4px;
     }
   }
+  .ins-stage{
+    font-size: 9px;
+    font-weight: bold;
+    span{
+      display: inline;
+      padding: 4px 6px;
+      position: relative;
+      top: -2px;  
+    }
+  }
 }
 #expandTreeBtn,
 #collapseTreeBtn {

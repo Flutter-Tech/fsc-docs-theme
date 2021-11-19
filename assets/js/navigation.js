@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Opens parent menus
   const menuElements = findElementByClassUrl("menu-link", window.location.href);
   openMenus(menuElements);
+  
   //Hides search box when document body width below 539px
   var scrollY = 0;
   var width =

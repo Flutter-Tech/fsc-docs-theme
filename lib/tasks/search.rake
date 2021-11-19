@@ -41,7 +41,6 @@ permalink: /assets/js/search-data.json
         {%- assign titleAndContent = part | split: \'</h1>\' -%}
         {%- assign title = titleAndContent[0] | replace_first: \'>\', \'<h1>\' | split: \'<h1>\' -%}
         {%- assign title = title[1] | strip_html -%}
-        {%- assign content = titleAndContent[1] -%}
         {%- assign url = page.url -%}
         {%- if title == page.title and parts[0] == \'\' -%}
           {%- assign title_found = true -%}

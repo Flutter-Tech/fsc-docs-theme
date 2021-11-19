@@ -1,3 +1,6 @@
+---
+layout: js_minifier
+---
 (function(global, factory) {
     typeof exports === "object" && typeof module !== "undefined" ? module.exports = factory() : typeof define === "function" && define.amd ? define("uikit", factory) : (global = global || self, 
     global.UIkit = factory());

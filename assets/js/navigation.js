@@ -1,3 +1,6 @@
+---
+layout: js_minifier
+---
 document.addEventListener("DOMContentLoaded", function () {
   // Adds toggle to parent menus
   const menuIconToggleEls = document.getElementsByClassName("parent-icon");

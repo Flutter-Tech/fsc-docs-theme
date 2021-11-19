@@ -1,4 +1,5 @@
 ---
+layout: js_minifier
 ---
 (function (fdt, undefined) {
 

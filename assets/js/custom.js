@@ -39,7 +39,7 @@ function initNav() {
 
 function initSearch() {
   var request = new XMLHttpRequest();
-  request.open('GET', '{{ "/assets/js/search-data.json.gz" | absolute_url }}', true);
+  request.open('GET', '{{ "/assets/js/search-data.json" | absolute_url }}', true);
   request.setRequestHeader('Accept-Encoding', 'gzip');
 
   request.onload = function(){

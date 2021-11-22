@@ -50,7 +50,6 @@ function initSearch() {
       var index = lunr(function(){
         this.ref('id');
         this.field('title', { boost: 200 });
-        this.field('content', { boost: 2 });
         {% if site.search.rel_url != false %}
         this.field('relUrl');
         {% endif %}
@@ -60,7 +59,6 @@ function initSearch() {
           this.add({
             id: i,
             title: docs[i].title,
-            content: docs[i].content,
             {% if site.search.rel_url != false %}
             relUrl: docs[i].relUrl
             {% endif %}
@@ -300,7 +298,7 @@ function searchLoaded(index, docs) {
         resultPreviews.classList.add('search-result-previews');
         resultLink.appendChild(resultPreviews);
 
-        var content = doc.content;
+        var content = "";
         for (var j = 0; j < Math.min(previewPositions.length, {{ site.search.previews | default: 3 }}); j++) {
           var position = previewPositions[j];
 

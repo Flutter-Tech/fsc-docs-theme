@@ -788,30 +788,41 @@ img.division-logo-table{
 }
 
 /* Charts */
-
-.bar {
-	fill: #3688CE;
-	&:hover {
-		fill: #549AD5;
-	}
+.fill-blue {
+    fill: #3688CE;
+    &:hover {
+        fill: #549AD5;
+    }
 }
 
-.axis {
-	font: 10px sans-serif;
-	path {
-		fill: none;
-		stroke: #000;
-		shape-rendering: crispEdges;
-	}
-	line {
-		fill: none;
-		stroke: #000;
-		shape-rendering: crispEdges;
-	}
+.fill-purple {
+    fill: #8A64C7;
+    &:hover {
+        fill: #ae93d8;
+    }
 }
 
-.x.axis {
-	path {
-		display: none;
-	}
+.fill-green {
+    fill: #64CD84;
+    &:hover {
+        fill: #90dba7;
+    }
+}
+
+.fill-pink {
+    fill: #E27EC2;
+    &:hover {
+        fill: #f1c3e2;
+    }
+}
+
+.fill-grey {
+    fill: #353F47;
+    &:hover {
+        fill: #5d6f7d;
+    }
+}
+
+.stroke-black {
+    stroke: black;
 }
